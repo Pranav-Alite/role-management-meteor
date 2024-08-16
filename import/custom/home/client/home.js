@@ -6,7 +6,6 @@ import { ADMIN, EDITOR, VIEWER } from '../../../lib/constants'
 import { Roles } from 'meteor/alanning:roles'
 import { Session } from "meteor/session";
 
-
 Template.home.onRendered(function () {
 
     Session.set('selectedUserId', Meteor.userId())
