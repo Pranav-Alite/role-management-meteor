@@ -1,0 +1,31 @@
+<template name="mainLayout">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid justify-content-between px-3">
+            <ul class="navbar-nav flex-row gap-3">
+                <li class="nav-item">
+                    <a class="nav-link fs-5 fw-bold" href="/">Home</a>
+                </li>
+                {{#if isAdmin}}
+                <li class="nav-item">
+                    <a class="nav-link fs-5 fw-bold" href="/admin/roles">Roles</a>
+                </li>
+                {{/if}}
+            </ul>
+
+            {{#if currentUser}}
+            <div>
+                <span class="fw-bold fs-5 mx-2 userProfile">Welcome, {{currentUser.profile.firstName}}</span>
+                <button class="logout-btn">Logout</button>
+            </div>
+            {{else}}
+            <div>
+                <button class="login-btn">Login</button>
+                <button class="register-btn">Register</button>
+            </div>
+            {{/if}}
+        </div>
+    </nav>
+    <main>
+        {{> Template.dynamic template=main}}
+    </main>
+</template>

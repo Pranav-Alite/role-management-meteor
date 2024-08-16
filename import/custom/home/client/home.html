@@ -1,0 +1,73 @@
+<template name="home">
+    <div class="container">
+        <h1 class="my-3 fw-bold">PLAYERS LIST</h1>
+        <div class="loader py-5 text-center">
+            <img src="/images/infinite-spinner.svg" alt="Loader">
+        </div>
+        <div class="owl-carousel my-4">
+            {{#each players}}
+            <div class="item">
+                <div class="players-card">
+                    <p class="fs-6 m-1"><span class="fw-bold"> Name :</span> {{name}}</p>
+                    <p class="fs-6 m-1"><span class="fw-bold"> Position :</span> {{this.position}}</p>
+                    <p class="fs-6 m-1"><span class="fw-bold"> Team :</span> {{team}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+        {{#if isAdmin}}
+        {{> tabular table=userListTable class="table table-striped table-bordered table-condensed"}}
+        {{/if}}
+    </div>
+
+    {{#if isAdmin}}
+    <div class="modal fade" id="deleteUserModal" tabindex="-1" aria-labelledby="deleteUserModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="deleteUserModalLabel">Delete User</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="fs-5">Are You sure you want to delete this User?</p>
+
+                    <button class="delete-user-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editUserRolesModal" tabindex="-1" aria-labelledby="editUserRolesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="editUserRolesModalLabel">Edit User Roles</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="edit-user-role-form">
+                        <!-- <p class="fs-5">Are You sure you want to delete this User?</p> -->
+                        <p class="fs-4 fw-bold m-0">Select Roles</p>
+                        <div class="d-flex gap-2 mt-3 mb-4">
+                            {{#each roles}}
+                            <div>
+                                <input type="checkbox" name="roles" id="{{this}}" value="{{this}}"
+                                    checked="{{isSelected this}}">
+                                <label for="{{this}}">{{this}}</label>
+                            </div>
+                            {{/each}}
+                        </div>
+                        <button type="submit" class="edit-user-role-form-btn" name="submitBtn">Update Roles</button>
+                        <div class="text-center mt-3">
+                            <span class="custom-error m-0 fw-bold"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</template>

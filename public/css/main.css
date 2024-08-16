@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif ;
+}
+body {
+  background-color: #d8dbf5;
+}
+
+.login-btn,
+.register-btn,
+.logout-btn {
+  padding: 3px 15px;
+  font-size: 20px;
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 6px;
+  transition: .3s;
+  font-weight: 600;
+  letter-spacing: .5px;
+}
+
+.login-btn {
+  background-color: #0d6efd;
+}
+
+.login-btn:hover {
+  background-color: transparent;
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+
+.logout-btn {
+  background-color: #f13232;
+}
+
+.logout-btn:hover {
+  border-color: #f13232;
+  color: #f13232;
+  background-color: transparent;
+}
+
+.register-btn {
+  background-color: #210796;
+}
+
+.register-btn:hover {
+  background-color: transparent;
+  border-color: #210796;
+  color: #210796;
+}
+
+.owl-carousel .item {
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.players-card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+div.dataTables_filter input {
+  margin: 0px;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.delete-user-btn, .edit-user-role-form-btn{
+  background-color: #f13232;
+  color: white;
+  width: 100%;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  transition: .3s;
+}
+
+.edit-user-role-form-btn{
+  background-color: #0d6efd;
+}
+.edit-user-role-form-btn:hover{
+  background-color: transparent;
+  color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.delete-user-btn:hover{
+  background-color: transparent;
+  color: #f13232;
+  border-color: #f13232;
+}
+
+.custom-error {
+  background-color: red;
+  color: white;
+  border-radius: 100vw;
+}

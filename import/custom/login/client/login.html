@@ -1,0 +1,23 @@
+<template name="login">
+    <div class="container">
+        <form class="login-form my-5">
+            <h2 class="mt-2 mb-3 fw-bold">Login Here</h2>
+            <div class="my-2">
+                <input type="email" name="email" id="email" class="form-control shadow-none validate[required, custom[email]]" placeholder="Email Address">
+            </div>
+            <div class="my-2">
+                <input type="password" name="password" id="password" class="form-control shadow-none validate[required]" placeholder="Password">
+            </div>
+            <div class="my-2">
+                <button type="submit" class="login-form-btn">Login</button>
+            </div>
+
+            <div class="my-3 d-flex justify-content-center">
+                <a href="/user/register">Don't Have Account? Register Here</a>
+            </div>
+            <div class="text-center">
+                <span class="custom-error m-0 fw-bold"></span>
+            </div>
+        </form>
+    </div>
+</template>

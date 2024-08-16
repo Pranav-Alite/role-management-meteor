@@ -1,0 +1,30 @@
+.roles-boxes{
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.change-user-role-form {
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.update-user-btn{
+    background-color: #0d6efd;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: .3s;
+}
+.update-user-btn:hover{
+    background-color: transparent;
+    border-color: #0d6efd;
+    color: #0d6efd;
+}

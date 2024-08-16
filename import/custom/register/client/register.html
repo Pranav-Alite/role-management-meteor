@@ -1,0 +1,48 @@
+<template name="register">
+    <div class="container">
+        <form class="register-form my-5">
+            <h2 class="mt-2 mb-3 fw-bold">Register Here</h2>
+            <div class="my-2">
+                <div class="d-flex gap-2 flex-column flex-md-row" >
+                    <div class="w-100">
+                        <input type="text" name="firstName" id="firstName" class="form-control shadow-none validate[required, custom[name]]" placeholder="First Name" maxlength="15">
+                    </div >
+                    <div class="w-100">
+                        <input type="text" name="lastName" id="lastName" class="form-control shadow-none validate[required, custom[name]]" placeholder="Last Name" maxlength="15">
+                    </div>
+                </div>
+            </div>
+            <div class="my-2">
+                <div class="d-flex gap-2 flex-column flex-md-row">
+                    <div class="w-100">
+                        <input type="email" name="email" id="email" class="form-control shadow-none validate[required, custom[email]]" placeholder="Email Address">
+                    </div>
+                    <div class="w-100">
+                        <input type="text" name="phone" id="phone" class="form-control shadow-none validate[required , custom[phone]]" placeholder="Phone Number" maxlength="10">
+                    </div>
+                </div>
+            </div>
+            <div class="my-2">
+                <div class="d-flex gap-2 flex-column flex-md-row">
+                    <div class="w-100">
+                        <input type="password" name="password" id="password" class="form-control shadow-none validate[required]" placeholder="Password">
+                    </div>
+                    <div class="w-100">
+                        <input type="password" name="confirmPassword" id="confirmPassword" class="form-control shadow-none validate[required, equals[password]]" placeholder="Cofirm Password">
+                    </div>
+                </div>
+            </div>
+            <div class="my-2">
+                <button type="submit" class="register-form-btn">Register</button>
+            </div>
+
+            <div class="my-3 d-flex justify-content-center">
+                <a href="/user/login">Have Account? Login Here</a>
+            </div>
+
+            <div class="text-center">
+                <span class="custom-error m-0"></span>
+            </div>
+        </form>
+    </div>
+</template>

@@ -1,0 +1,47 @@
+<template name="allRoles">
+    <div class="container">
+        <h3 class="text-center my-4 fw-bold">My Roles : {{myRoles.roles}}</h3>
+
+        <div class="d-flex justify-content-between my-4">
+            {{#each roles}}
+            <div class="roles-boxes">
+                <p class="m-0 fw-bold fs-5">{{this}} - <span class="fs-3">{{countUserInRole this}}</span></p>
+            </div>
+            {{/each}}
+        </div> 
+
+        <!-- <form class="change-user-role-form">
+
+            <h3 class="mt-2 mb-4">Change User Roles</h3>
+            <div class="my-2">
+                <select name="name" id="name" class="form-select shadow-none">
+                    {{#each users}}
+                    <option value="{{_id}}">
+                        {{#if isSameUser _id}}
+                        {{profile.firstName}} - YOU
+                        {{else}}
+                        {{profile.firstName}}
+                        {{/if}}
+                    </option>
+                    {{/each}}
+                </select>
+            </div>
+
+            <div class="my-2 d-flex gap-3">
+                <label for="roles" class="fw-bold">Select Roles : </label>
+                <div class="d-flex gap-3">
+                    {{#each roles}}
+                    <div>
+                        <input type="checkbox" name="roles" id="{{this}}" value="{{this}}" checked="{{isSelected this}}">
+                        <label for="{{this}}">{{this}}</label>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+
+            <div class="my-4">
+                <button type="submit" class="update-user-btn">Save</button>
+            </div>
+        </form> -->
+    </div>
+</template>

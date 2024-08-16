@@ -1,0 +1,5 @@
+import { Meteor } from 'meteor/meteor'
+import '../../lib/index'
+import '../../custom/register/server/index'
+import '../../custom/home/server/index'
+import '../../custom/roles/server/index'
