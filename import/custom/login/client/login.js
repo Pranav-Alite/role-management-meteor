@@ -22,3 +22,9 @@ Template.login.events({
         })
     }
 })
+
+Template.login.helpers({
+    hello() {
+        return 'hello'
+    }
+})
