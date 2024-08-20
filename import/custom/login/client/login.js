@@ -25,6 +25,7 @@ Template.login.events({
 
 Template.login.helpers({
     hello() {
-        return 'hello'
+        // return 'hello'
+        return 'This is a demo Helper'
     }
 })
